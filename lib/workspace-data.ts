@@ -9,6 +9,8 @@ export const WorkspaceIcons = {
   Furniture: Armchair
 };
 
+// export const WorkspaceBanner = `${imagesPath}/banner.jpg`;
+
 export const WorkspaceData: WorkspaceItem[] = [
   {
     category: "Hardware",
@@ -22,6 +24,11 @@ export const WorkspaceData: WorkspaceItem[] = [
         name: "LG UltraWide Curved Monitor",
         description: "37.5 inch 38WR85QC-W 144Hz 1ms QHD",
         image: `${imagesPath}/lg-ultrawide.jpg`
+      },
+      {
+        name: "Asus ZenScreen MB16ACv Portable Monitor",
+        description: "15.6 inch, IPS, 1920x1080, 5MS, USB Type-C, Matte Screen, Low Blue Light, Antibacterial",
+        image: `${imagesPath}/asus-zenscreen.jpg`
       },
       {
         name: "Logitech MX Keys Mini Keyboard",

@@ -12,6 +12,13 @@ export default function WorkspacePage() {
         <p className="text-muted-foreground">
           Here's what I use daily to get my work done efficiently.
         </p>
+        {/* <FallbackImage
+          src={WorkspaceBanner}
+          alt="Workspace"
+          className="w-full rounded-lg"
+          width={1200}
+          height={400}
+        /> */}
       </div>
 
       <div className="space-y-16">
