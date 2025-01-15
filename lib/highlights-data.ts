@@ -4,6 +4,16 @@ const imageFolderPath = '/images/highlights';
 
 export const HighlightList: Highlight[] = [
     {
+        year: "2025",
+        events: [
+            {
+                title: "Graduated (Master's degree)",
+                description: "I graduated with a master's degree with a 4/4 grade. My thesis topic is to develop a no-code platform and a LLM supported by AI.",
+                imageUrl: `${imageFolderPath}/2025_master_degree.jpg`
+            }
+        ]
+    },
+    {
         year: "2024",
         events: [
             {
@@ -48,7 +58,7 @@ export const HighlightList: Highlight[] = [
         ]
     },
     {
-        year: "2021",
+        year: "2022",
         events: [
             {
                 title: "Master's degree training started",
