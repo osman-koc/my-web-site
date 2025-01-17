@@ -1,4 +1,4 @@
-const _title = 'Osman KOÇ - Software Engineer | Portfolio & Blog';
+const _title = 'Osman KOÇ - Software Engineer, M.Sc. | Portfolio & Blog';
 const _titleShort = 'Osman KOÇ';
 const _description = 'I develop web-based applications professionally. I also develop mobile applications and open source software for hobby purposes. You can review what is published on GitHub, Google Play Store and AppStore.';
 const _keywords = ['Osman KOÇ', 'Osman Koc', 'osmankoc', 'osmkoc', 'kocosman', 'koc osman', 'dev', 'developer', 'kocosm', 'blog', 'medium'];
