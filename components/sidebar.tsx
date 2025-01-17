@@ -109,8 +109,8 @@ export function Sidebar() {
                   priority
                 />
                 <div>
-                  <h2 className="font-semibold">Osman Koç</h2>
-                  <p className="text-sm text-muted-foreground">Software Engineer</p>
+                  <h2 className="font-semibold">{ sharedMetadata.titleShort }</h2>
+                  <p className="text-sm text-muted-foreground">{ sharedMetadata.subTitle }</p>
                 </div>
               </div>
             </Link>

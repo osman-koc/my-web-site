@@ -15,8 +15,9 @@ export default async function Home() {
           Hi, I'm Osman 👋
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed">
-          A software engineer based in Türkiye, focused on building scalable applications
-          and writing about web development, technology, and software engineering practices.
+        A Software Engineer, M.Sc., based in Türkiye. I specialize in building scalable 
+        applications and have a passion for web development, technology, and software engineering 
+        practices. I also enjoy sharing insights and knowledge through writing.
         </p>
       </section>
 

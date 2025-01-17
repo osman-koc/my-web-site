@@ -1,5 +1,6 @@
 const _title = 'Osman KOÇ - Software Engineer, M.Sc. | Portfolio & Blog';
 const _titleShort = 'Osman KOÇ';
+const _subTitle = 'Software Engineer, M.Sc.';
 const _description = 'I develop web-based applications professionally. I also develop mobile applications and open source software for hobby purposes. You can review what is published on GitHub, Google Play Store and AppStore.';
 const _keywords = ['Osman KOÇ', 'Osman Koc', 'osmankoc', 'osmkoc', 'kocosman', 'koc osman', 'dev', 'developer', 'kocosm', 'blog', 'medium'];
 const _email = 'me@kocosman.com.tr';
@@ -22,6 +23,7 @@ const _urls = {
 export const sharedMetadata = {
   title: _title,
   titleShort: _titleShort,
+  subTitle: _subTitle,
   description: _description,
   keywords: _keywords,
   email: _email,
