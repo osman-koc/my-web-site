@@ -18,7 +18,7 @@ export const ProjectList: Project[] = [
   {
     title: "Personal Website",
     description: "osmankoc.dev - Built with Next.js, TypeScript, and Tailwind CSS",
-    image: "https://osmkoc.com/wp-content/uploads/2024/11/osmkoc_newss.jpg",
+    image: "/images/osmankocdev-home.jpg",
     demoUrl: "https://osmankoc.dev",
     sourceUrl: "https://github.com/osman-koc/my-web-site"
   },
