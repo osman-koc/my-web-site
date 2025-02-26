@@ -4,7 +4,7 @@ const imageFolderPath = '/images/projects';
 
 export const ProjectList: Project[] = [
   {
-    title: "Git Search AI",
+    title: "Git Search AI - VSCode Extension",
     description: "AI-powered Git commit history and code search tool for VS Code. Running on your local machine, it helps you find the code you need in seconds.",
     image: "/images/projects/git-search-ai/icon.png",
     demoUrl: "https://marketplace.visualstudio.com/items?itemName=kocdev.git-search-ai"
