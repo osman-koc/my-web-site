@@ -24,7 +24,7 @@ export function PostGrid({ posts }: { posts: Post[] }) {
         >
           <div className="aspect-video relative rounded-lg overflow-hidden bg-muted">
             <FallbackImage
-              src={post.thumbnail || 'https://source.unsplash.com/random/800x600?technology'}
+              src={post.thumbnail || '/images/no-image.jpg'}
               alt={post.title}
               fill
               className="object-cover transition-transform group-hover:scale-105"

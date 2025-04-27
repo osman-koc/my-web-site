@@ -4,7 +4,7 @@ const imageFolderPath = '/images/projects';
 
 export const ProjectList: Project[] = [
   {
-    title: "Git Search AI",
+    title: "Git Search AI - VSCode Extension",
     description: "AI-powered Git commit history and code search tool for VS Code. Running on your local machine, it helps you find the code you need in seconds.",
     image: "/images/projects/git-search-ai/icon.png",
     demoUrl: "https://marketplace.visualstudio.com/items?itemName=kocdev.git-search-ai"
@@ -18,7 +18,7 @@ export const ProjectList: Project[] = [
   {
     title: "Personal Website",
     description: "osmankoc.dev - Built with Next.js, TypeScript, and Tailwind CSS",
-    image: "https://osmkoc.com/wp-content/uploads/2024/11/osmkoc_newss.jpg",
+    image: "/images/projects/osmankocdev-home.jpg",
     demoUrl: "https://osmankoc.dev",
     sourceUrl: "https://github.com/osman-koc/my-web-site"
   },

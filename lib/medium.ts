@@ -44,5 +44,5 @@ export async function getMediumPosts(limit = 10, page = 1): Promise<MediumFeed> 
 
 function extractImageFromContent(content: string): string {
   const imgMatch = content.match(/<img[^>]+src="([^">]+)"/);
-  return imgMatch ? imgMatch[1] : 'https://source.unsplash.com/random/800x600?technology';
+  return imgMatch ? imgMatch[1] : '/images/no-image.jpg';
 }

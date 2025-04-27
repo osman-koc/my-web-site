@@ -13,7 +13,7 @@ export function FallbackImage({
   src,
   alt = "",
   className,
-  fallbackSrc = "https://source.unsplash.com/random/800x600?technology",
+  fallbackSrc = "/images/no-image.jpg",
   fill,
   ...props
 }: FallbackImageProps) {

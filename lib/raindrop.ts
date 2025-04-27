@@ -63,7 +63,7 @@ export const getBookmarksByCollection = cache(async (collectionId: number): Prom
       title: item.title,
       excerpt: item.excerpt || '',
       link: item.link,
-      cover: item.cover || 'https://source.unsplash.com/random/800x600?technology',
+      cover: item.cover || '/images/no-image.jpg',
       tags: item.tags || [],
       created: item.created,
     }));
