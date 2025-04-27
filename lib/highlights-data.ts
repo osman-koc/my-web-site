@@ -31,7 +31,7 @@ export const HighlightList: Highlight[] = [
             },
             {
                 title: "Joined Turkcell",
-                description: "I started working as an Export Developer at Turkcell as a member of a scrum team developing a framework for low-code and no-code development.",
+                description: "I started working as an Senior Developer at Turkcell as a member of a scrum team developing a framework for low-code and no-code development.",
             }
         ]
     },
