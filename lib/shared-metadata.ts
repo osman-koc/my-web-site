@@ -7,7 +7,7 @@ const _email = 'me@kocosman.com.tr';
 const _ogImgPath = '/og-image.png';
 
 const _socialAccounts = {
-  x: 'osmkoc',
+  x: 'osmankocdev',
   medium: 'osman-koc',
   linkedin: 'osman-koc',
   github: 'osman-koc'
