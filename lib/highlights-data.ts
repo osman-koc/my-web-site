@@ -7,9 +7,18 @@ export const HighlightList: Highlight[] = [
         year: "2025",
         events: [
             {
+                title: "Moved to Kocaeli",
+                description: "I moved to Kocaeli. It is a nice city, close to Istanbul and has a lot of nature around.",
+            },
+            {
                 title: "Graduated (Master's degree)",
                 description: "I graduated with a master's degree with a 4/4 grade. My thesis topic is to develop a no-code platform and a LLM supported by AI.",
                 imageUrl: `${imageFolderPath}/2025_master_degree.jpg`
+            },
+            {
+                title: "Launched 'Git Search AI' VS Code Extension",
+                description: "I developed a VS Code extension that uses AI models to search and summarise code in local repositories. This extension helps developers quickly find their git history and understand code changes.",
+                imageUrl: '/images/projects/git-search-ai/icon.png'
             }
         ]
     },
