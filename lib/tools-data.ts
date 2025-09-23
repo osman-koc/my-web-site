@@ -19,8 +19,8 @@ export const ToolsData: Tool[] = [
                 description: "A tool for managing, configuring, and querying SQL Server databases."
             },
             {
-                name: "Azure Data Studio",
-                description: "A lightweight, modern IDE for data development and management."
+                name: "DBeaver",
+                description: "A universal database management tool for developers and database administrators."
             },
             {
                 name: "Docker",
@@ -49,9 +49,21 @@ export const ToolsData: Tool[] = [
                 description: " platform that allows users to build and deploy AI applications with minimal coding, streamlining the development process."
             },
             {
+                name: "Google AI Studio",
+                description: "A comprehensive platform by Google that provides tools and services for building, deploying, and managing AI models and applications."
+            },
+            {
+                name: "OpenAI Codex CLI",
+                description: "A command-line interface that allows developers to interact with OpenAI's Codex models, enabling code generation and other AI-powered functionalities directly from the terminal."
+            },
+            {
                 name: "Microsoft Copilot",
                 description: "An AI-powered assistant integrated into Microsoft products, designed to enhance productivity by assisting with tasks like coding, writing, and data analysis."
             },
+            {
+                name: "GitHub Copilot",
+                description: "An AI pair programmer that helps you write code faster and with less effort by suggesting whole lines or blocks of code as you type."
+            }
         ]
     },
     {
