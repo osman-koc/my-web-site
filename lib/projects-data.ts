@@ -90,6 +90,13 @@ export const ProjectList: Project[] = [
     ]
   },
   {
+    title: "ZooWord - Word guessing game",
+    description: "Find the common word that the words displayed on the screen suggest or are related to.",
+    image: "https://github.com/osman-koc/zoo-word-game/raw/master/img/lightmode_screen.jpg",
+    demoUrl: "https://osman-koc.github.io/zoo-word-game/",
+    sourceUrl: "https://github.com/osman-koc/zoo-word-game"
+  },
+  {
     title: "Simple ToDo",
     description: "Minimalist todo list app for daily tasks. Developed with Flutter.",
     image: "https://play-lh.googleusercontent.com/Sfkbt3l8SdK1WWJ637Gi0d4WskqF3SPn32uo3V7_CpjZQnMXZr56Au0Mo2bMuM8srA=w240-h480-rw",
