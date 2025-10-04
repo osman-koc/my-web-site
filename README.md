@@ -15,7 +15,7 @@ My personal website built with Next.js and Tailwind CSS. Uses Medium as a headle
 - 🔖 Raindrop.io integration for bookmarks
 - 🖼️ Gravatar for profile image
 - 🎯 Perfect Lighthouse score
-- 🤖 Play.AI for voice agent
+- 🤖 Play.AI for voice agent (disabled)
 
 ## Tech Stack
 
