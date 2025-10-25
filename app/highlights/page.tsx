@@ -48,8 +48,12 @@ export default function HighlightPage() {
                     </p>
                     { /* Image */}
                     {event.imageUrl && (
-                      <div className="mt-4">
-                        <ImageDialog imageUrl={event.imageUrl} altText={event.title} />
+                      <div className="mt-4 inline-block">
+                        <ImageDialog 
+                          imageUrl={event.imageUrl} 
+                          altText={event.title}
+                          className="h-32 w-32"
+                        />
                       </div>
                     )}
                   </div>

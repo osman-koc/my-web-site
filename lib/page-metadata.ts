@@ -73,6 +73,16 @@ export const PageMetadataList: Record<string, PageMetadata> = {
             height: 630,
         }
     },
+    talks: {
+        route: "/talks",
+        title: "Talks & Presentations",
+        description: "Past and upcoming talks, presentations and conference appearances.",
+        image: {
+            url: '/api/og?page=talks',
+            width: 1200,
+            height: 630,
+        }
+    },
 };
 
 export const DefaultPageMetadata: PageMetadata = {

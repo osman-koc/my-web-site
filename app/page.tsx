@@ -1,12 +1,29 @@
 import { MediumPosts } from '@/components/medium-posts';
 import { FeaturedProjects } from '@/components/featured-projects';
 import { getMediumPosts } from '@/lib/medium';
+import { TalksList } from '@/lib/talks-data';
 import { GetMetada } from '@/lib/page-metadata';
+import { ImageDialog } from '@/components/ui/image-dialog';
 
 export const metadata = GetMetada('home');
 
+function getLatestTalks(count: number = 1) {
+  // Flatten all talks and sort by date (most recent first)
+  const allTalks = TalksList.flatMap(year => year.talks.map(talk => ({
+    ...talk,
+    year: year.year
+  }))).sort((a, b) => {
+    if (!a.datetime) return 1;
+    if (!b.datetime) return -1;
+    return new Date(b.datetime).getTime() - new Date(a.datetime).getTime();
+  });
+
+  return allTalks.slice(0, count);
+}
+
 export default async function Home() {
   const { posts: mediumPosts } = await getMediumPosts(4);
+  const latestTalks = getLatestTalks(3);
 
   return (
     <div className="space-y-16">
@@ -20,6 +37,8 @@ export default async function Home() {
         practices. I also enjoy sharing insights and knowledge through writing.
         </p>
       </section>
+
+
 
       <section className="space-y-6">
         <div className="flex items-center justify-between">
@@ -40,6 +59,40 @@ export default async function Home() {
         </div>
         <FeaturedProjects />
       </section>
+
+      {latestTalks.length > 0 && (
+        <section className="space-y-6">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-medium tracking-tight">Recent Talk</h2>
+            <a href="/talks" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              View all →
+            </a>
+          </div>
+          <div className="space-y-4">
+            {latestTalks.map((talk, idx) => (
+              <div key={idx} className="group space-y-1">
+                <div className="flex items-baseline justify-between gap-2">
+                  <h3 className="font-medium group-hover:text-primary transition-colors">
+                    {talk.title}
+                  </h3>
+                  {talk.datetime && (
+                    <span className="text-sm text-muted-foreground whitespace-nowrap">
+                      {new Date(talk.datetime).toLocaleDateString('en-GB', { 
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric'
+                      })}
+                    </span>
+                  )}
+                </div>
+                {talk.description && (
+                  <p className="text-sm text-muted-foreground line-clamp-2">{talk.description}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

@@ -1,18 +1,24 @@
 import Image from 'next/image';
 import * as Dialog from '@radix-ui/react-dialog';
+import { cn } from '@/lib/utils';
 
 interface ImageDialogProps {
   imageUrl: string;
   altText?: string;
+  className?: string;
 }
 
-export const ImageDialog: React.FC<ImageDialogProps> = ({ imageUrl, altText }) => {
+export const ImageDialog: React.FC<ImageDialogProps> = ({ imageUrl, altText, className }) => {
   const alt = altText || 'Image';
 
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <div className="relative h-48 w-full overflow-hidden rounded-lg shadow-md cursor-pointer transition-opacity hover:opacity-90">
+        <div className={cn(
+          "relative overflow-hidden rounded-lg shadow-md cursor-pointer transition-opacity hover:opacity-90",
+          !className && "h-48 w-full", // Default height if no className provided
+          className
+        )}>
           <Image
             src={imageUrl}
             alt={alt}
