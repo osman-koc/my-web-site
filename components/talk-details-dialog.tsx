@@ -10,6 +10,7 @@ interface TalkDetailsProps {
     location?: string;
     description?: string;
     imageUrl?: string;
+    imageUrlDark?: string;
     participationLink?: string;
     otherLinks?: { label: string; url: string }[];
     planned?: boolean;
@@ -30,6 +31,8 @@ function formatDate(dateString?: string) {
 }
 
 export function TalkDetailsDialog({ talk, isOpen, onClose }: TalkDetailsProps) {
+  const lightImage = talk.imageUrl ?? talk.imageUrlDark;
+  const darkImage = talk.imageUrlDark ?? talk.imageUrl;
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-3xl">
@@ -38,13 +41,27 @@ export function TalkDetailsDialog({ talk, isOpen, onClose }: TalkDetailsProps) {
         </DialogHeader>
         
         <div className="space-y-6">
-          {talk.imageUrl && (
+          {(lightImage || darkImage) && (
             <div className="aspect-video overflow-hidden rounded-lg">
-              <ImageDialog
-                imageUrl={talk.imageUrl}
-                altText={talk.title}
-                className="h-full w-full object-cover"
-              />
+              <div className="h-full w-full block dark:hidden">
+                {lightImage && (
+                  <ImageDialog
+                    imageUrl={lightImage}
+                    altText={talk.title}
+                    className="h-full w-full object-cover"
+                  />
+                )}
+              </div>
+
+              <div className="h-full w-full hidden dark:block">
+                {darkImage && (
+                  <ImageDialog
+                    imageUrl={darkImage}
+                    altText={talk.title}
+                    className="h-full w-full object-cover"
+                  />
+                )}
+              </div>
             </div>
           )}
 

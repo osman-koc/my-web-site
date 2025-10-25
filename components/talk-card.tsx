@@ -9,6 +9,8 @@ interface TalkCardProps {
 }
 
 export function TalkCard({ talk, onViewDetails }: TalkCardProps) {
+  const lightImage = talk.imageUrl ?? talk.imageUrlDark;
+  const darkImage = talk.imageUrlDark ?? talk.imageUrl;
   function formatDate(dateString?: string) {
     if (!dateString) return undefined;
     try {
@@ -27,9 +29,21 @@ export function TalkCard({ talk, onViewDetails }: TalkCardProps) {
         <span className="absolute top-3 right-3 z-10 inline-flex items-center rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground shadow">Upcoming</span>
       )}
 
-      {talk.imageUrl && (
+      {(lightImage || darkImage) && (
         <div className="aspect-[16/9] overflow-hidden">
-          <ImageDialog imageUrl={talk.imageUrl} altText={talk.title} className="h-full w-full object-cover" />
+          {/* Light-mode: prefer `imageUrl`, fall back to `imageUrlDark` */}
+          <div className="h-full w-full block dark:hidden">
+            {lightImage && (
+              <ImageDialog imageUrl={lightImage} altText={talk.title} className="h-full w-full object-cover" />
+            )}
+          </div>
+
+          {/* Dark-mode: prefer `imageUrlDark`, fall back to `imageUrl` */}
+          <div className="h-full w-full hidden dark:block">
+            {darkImage && (
+              <ImageDialog imageUrl={darkImage} altText={talk.title} className="h-full w-full object-cover" />
+            )}
+          </div>
         </div>
       )}
 

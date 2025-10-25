@@ -2,6 +2,7 @@ import { type Talk } from '@/types/talk';
 
 const imageFolderPath = '/images/highlights';
 const defaultImage = '/images/talks/no-image.png';
+const defaultImageDark = '/images/talks/no-image-dark.png';
 
 export const TalksList: Talk[] = [
   {
@@ -10,27 +11,29 @@ export const TalksList: Talk[] = [
        {
         title: 'AI-Assisted Developer Tools Workshop',
         datetime: '2025-12-16',
-        location: 'Bursa Uludag University',
+        location: 'Uludag University, Bursa',
           description:
             'Hands-on workshop exploring the latest AI-powered tools for developers, including practical demonstrations and workflow optimization strategies.',
         imageUrl: defaultImage,
+        imageUrlDark: defaultImageDark,
         participationLink: '#',
         planned: true
       }, 
       {
         title: 'Future of Development with AI',
         datetime: '2025-11-17',
-        location: 'Istanbul Ticaret University',
+        location: 'Istanbul Ticaret University, Istanbul',
           description:
             'Keynote on the evolving role of AI in software development, future trends, and how AI is shaping the next generation of developer experiences.',
         imageUrl: defaultImage,
+        imageUrlDark: defaultImageDark,
         participationLink: '#',
         planned: true
       },
       {
         title: "Master's Thesis Defense",
         datetime: '2025-07-01',
-        location: 'Istanbul Technical University',
+        location: 'Düzce University, Düzce',
         description:
           "Presentation of my master's thesis about no-code platforms and LLM-assisted development.",
         imageUrl: `${imageFolderPath}/2025_master_degree.jpg`,

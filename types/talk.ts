@@ -9,6 +9,7 @@ export type TalkItem = {
   location?: string; // venue/location of the talk
   description?: string;
   imageUrl?: string;
+  imageUrlDark?: string;
   participationLink?: string; // link to register or join (optional)
   otherLinks?: { label: string; url: string }[]; // post-event materials, slides, photos
   planned?: boolean; // indicates if this is a planned/upcoming talk
@@ -21,6 +22,7 @@ export type TalkWithYear = {
   location?: string;
   description?: string;
   imageUrl?: string;
+  imageUrlDark?: string;
   participationLink?: string;
   otherLinks?: { label: string; url: string }[];
   planned?: boolean;
