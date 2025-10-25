@@ -13,3 +13,15 @@ export type TalkItem = {
   otherLinks?: { label: string; url: string }[]; // post-event materials, slides, photos
   planned?: boolean; // indicates if this is a planned/upcoming talk
 };
+
+export type TalkWithYear = {
+  year: string;
+  title: string;
+  datetime?: string;
+  location?: string;
+  description?: string;
+  imageUrl?: string;
+  participationLink?: string;
+  otherLinks?: { label: string; url: string }[];
+  planned?: boolean;
+};

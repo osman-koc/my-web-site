@@ -1,9 +1,7 @@
 import { type Talk } from '@/types/talk';
 
 const imageFolderPath = '/images/highlights';
-
-// Using existing site default image when an event doesn't have a custom image
-const defaultImage = '/images/no-image.jpg';
+const defaultImage = '/images/talks/no-image.png';
 
 export const TalksList: Talk[] = [
   {
@@ -13,8 +11,8 @@ export const TalksList: Talk[] = [
         title: 'AI-Assisted Developer Tools Workshop',
         datetime: '2025-12-16',
         location: 'Bursa Uludag University',
-        description:
-          'Talk on AI-assisted developer tools and practical workflows. Details to be announced.',
+          description:
+            'Hands-on workshop exploring the latest AI-powered tools for developers, including practical demonstrations and workflow optimization strategies.',
         imageUrl: defaultImage,
         participationLink: '#',
         planned: true
@@ -23,8 +21,8 @@ export const TalksList: Talk[] = [
         title: 'Future of Development with AI',
         datetime: '2025-11-17',
         location: 'Istanbul Ticaret University',
-        description:
-          'Talk on AI-assisted developer tools and practical workflows. Details to be announced.',
+          description:
+            'Keynote on the evolving role of AI in software development, future trends, and how AI is shaping the next generation of developer experiences.',
         imageUrl: defaultImage,
         participationLink: '#',
         planned: true
