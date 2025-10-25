@@ -30,7 +30,7 @@ export const HighlightList: Highlight[] = [
                 description: "Leaving my old website osmkoc.com, I published my new website developed with Tailwind CSS and shadcn/ui supported Next.js.",
             },
             {
-                title: 'Launched "En Yakın Hastaneyi Bul" Telegram Bot',
+                title: "Launched 'En Yakın Hastaneyi Bul' Telegram Bot",
                 description: "Created a Node.js-based Telegram bot to locate nearby hospitals or emergency rooms. Open-source on GitHub for contributions.",
             },
             {
@@ -39,7 +39,7 @@ export const HighlightList: Highlight[] = [
                 imageUrl: `${imageFolderPath}/2024_presentation_medipol.jpg`
             },
             {
-                title: 'Launched "En Yakın Eczaneyi Bul" Telegram Bot',
+                title: "Launched 'En Yakın Eczaneyi Bul' Telegram Bot",
                 description: "Created a Node.js-based Telegram bot to locate nearby pharmacies or on-call pharmacies outside working hours. Open-source on GitHub for contributions.",
             },
             {
