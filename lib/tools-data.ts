@@ -45,10 +45,6 @@ export const ToolsData: Tool[] = [
                 description: "An AI-powered web development agent that enables users to prompt, run, edit, and deploy full-stack applications directly from the browser without local setup."
             },
             {
-                name: "v0.dev",
-                description: " platform that allows users to build and deploy AI applications with minimal coding, streamlining the development process."
-            },
-            {
                 name: "Google AI Studio",
                 description: "A comprehensive platform by Google that provides tools and services for building, deploying, and managing AI models and applications."
             },
