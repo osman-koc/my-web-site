@@ -7,13 +7,13 @@ export const HighlightList: Highlight[] = [
         year: "2025",
         events: [
             {
-                title: "Moved to Kocaeli",
-                description: "I moved to Kocaeli. It is a nice city, close to Istanbul and has a lot of nature around.",
-            },
-            {
                 title: "Graduated (Master's degree)",
                 description: "I graduated with a master's degree with a 4/4 grade. My thesis topic is to develop a no-code platform and a LLM supported by AI.",
                 imageUrl: `${imageFolderPath}/2025_master_degree.jpg`
+            },
+            {
+                title: "Published Research Article on No-Code Platforms",
+                description: "Our research article titled 'The Impact of Artificial Intelligence Enhanced No-Code Software Development Platforms on Software Processes: A Literature Review' was published in the Duzce University Journal of Science and Technology.",
             },
             {
                 title: "Launched 'Git Search AI' VS Code Extension",
@@ -28,6 +28,10 @@ export const HighlightList: Highlight[] = [
             {
                 title: "New UI for my new website: osmankoc.dev",
                 description: "Leaving my old website osmkoc.com, I published my new website developed with Tailwind CSS and shadcn/ui supported Next.js.",
+            },
+            {
+                title: 'Launched "En Yakın Hastaneyi Bul" Telegram Bot',
+                description: "Created a Node.js-based Telegram bot to locate nearby hospitals or emergency rooms. Open-source on GitHub for contributions.",
             },
             {
                 title: "Presentation at the Medipol University",
@@ -56,10 +60,6 @@ export const HighlightList: Highlight[] = [
     {
         year: "2022",
         events: [
-            {
-                title: "Moved to Çerkezköy",
-                description: "I moved to Çerkezköy district of Tekirdağ. It is a quiet city, there are not many activities to do in it. The best feature is that it is close to Istanbul :)",
-            },
             {
                 title: "Promoted to Senior Developer",
                 description: "Member of a IoT scrum team as a scrum master and developer developing backend services.",
