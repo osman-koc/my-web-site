@@ -34,14 +34,14 @@ export function TalkCard({ talk, onViewDetails }: TalkCardProps) {
           {/* Light-mode: prefer `imageUrl`, fall back to `imageUrlDark` */}
           <div className="h-full w-full block dark:hidden">
             {lightImage && (
-              <ImageDialog imageUrl={lightImage} altText={talk.title} className="h-full w-full object-cover" />
+              <ImageDialog imageUrl={lightImage} altText={talk.title} className="h-full w-full object-cover" enableDialog={false} />
             )}
           </div>
 
           {/* Dark-mode: prefer `imageUrlDark`, fall back to `imageUrl` */}
           <div className="h-full w-full hidden dark:block">
             {darkImage && (
-              <ImageDialog imageUrl={darkImage} altText={talk.title} className="h-full w-full object-cover" />
+              <ImageDialog imageUrl={darkImage} altText={talk.title} className="h-full w-full object-cover" enableDialog={false} />
             )}
           </div>
         </div>

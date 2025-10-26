@@ -49,6 +49,7 @@ export function TalkDetailsDialog({ talk, isOpen, onClose }: TalkDetailsProps) {
                     imageUrl={lightImage}
                     altText={talk.title}
                     className="h-full w-full object-cover"
+                    enableDialog={false}
                   />
                 )}
               </div>
@@ -59,6 +60,7 @@ export function TalkDetailsDialog({ talk, isOpen, onClose }: TalkDetailsProps) {
                     imageUrl={darkImage}
                     altText={talk.title}
                     className="h-full w-full object-cover"
+                    enableDialog={false}
                   />
                 )}
               </div>

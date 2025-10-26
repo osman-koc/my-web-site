@@ -6,17 +6,36 @@ interface ImageDialogProps {
   imageUrl: string;
   altText?: string;
   className?: string;
+  enableDialog?: boolean;
 }
 
-export const ImageDialog: React.FC<ImageDialogProps> = ({ imageUrl, altText, className }) => {
+export const ImageDialog: React.FC<ImageDialogProps> = ({ imageUrl, altText, className, enableDialog = true }) => {
   const alt = altText || 'Image';
+
+  if (!enableDialog) {
+    return (
+      <div className={cn(
+        "relative overflow-hidden rounded-lg shadow-md transition-opacity",
+        !className && "h-48 w-full",
+        className
+      )}>
+        <Image
+          src={imageUrl}
+          alt={alt}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 400px"
+        />
+      </div>
+    );
+  }
 
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
         <div className={cn(
           "relative overflow-hidden rounded-lg shadow-md cursor-pointer transition-opacity hover:opacity-90",
-          !className && "h-48 w-full", // Default height if no className provided
+          !className && "h-48 w-full",
           className
         )}>
           <Image
