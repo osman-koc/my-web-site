@@ -1,0 +1,17 @@
+# Ignore local files that should not be copied into the Docker image
+node_modules
+.next
+.env
+.env.local
+.env.*.local
+.git
+.vscode
+dist
+coverage
+npm-debug.log
+pnpm-lock.yaml
+package-lock.json
+.DS_Store
+Dockerfile
+docker-compose*.yml
+*.log
