@@ -1,6 +1,7 @@
 import { type Talk } from '@/types/talk';
 
-const imageFolderPath = '/images/highlights';
+const imageFolderPath = '/images/talks';
+const imageFolderPathHighlights = '/images/highlights';
 const defaultImage = '/images/talks/no-image.png';
 const defaultImageDark = '/images/talks/no-image-dark.png';
 
@@ -25,8 +26,8 @@ export const TalksList: Talk[] = [
         location: 'Istanbul Ticaret University, Istanbul',
           description:
             'Keynote on the evolving role of AI in software development, future trends, and how AI is shaping the next generation of developer experiences.',
-        imageUrl: defaultImage,
-        imageUrlDark: defaultImageDark,
+        imageUrl: defaultImage, //`${imageFolderPath}/2025_istanbul_ticaret_university.jpeg`,
+        imageUrlDark: defaultImageDark, //`${imageFolderPath}/2025_istanbul_ticaret_university.png`,
         participationLink: '#',
         planned: true
       },
@@ -36,7 +37,7 @@ export const TalksList: Talk[] = [
         location: 'Düzce University, Düzce',
         description:
           "Presentation of my master's thesis about no-code platforms and LLM-assisted development.",
-        imageUrl: `${imageFolderPath}/2025_master_degree.jpg`,
+        imageUrl: `${imageFolderPathHighlights}/2025_master_degree.jpg`,
         otherLinks: [
           { label: 'Thesis (PDF)', url: '#' },
           { label: 'Slides', url: '#' },
@@ -53,7 +54,7 @@ export const TalksList: Talk[] = [
         location: 'Medipol University, Istanbul',
         description:
           'Talk on no-code software development and Turkcell LCAP platform. Discussion with students about low-code and no-code platforms and real-world use cases.',
-        imageUrl: `${imageFolderPath}/2024_presentation_medipol.jpg`,
+        imageUrl: `${imageFolderPathHighlights}/2024_presentation_medipol.jpg`,
         otherLinks: [
           { label: 'University Announcement', url: '#' },
         ],
@@ -69,7 +70,7 @@ export const TalksList: Talk[] = [
         location: 'Bülent Ecevit University, Zonguldak',
         description:
           "Shared work on the Driver Sleep Alert System at the Future Engineers International Student Symposium (EFIS).",
-        imageUrl: `${imageFolderPath}/2018_efis_presentation.jpg`,
+        imageUrl: `${imageFolderPathHighlights}/2018_efis_presentation.jpg`,
         otherLinks: [
           { label: 'Event Page', url: '#' },
         ],

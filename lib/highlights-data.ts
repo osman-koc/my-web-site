@@ -7,6 +7,11 @@ export const HighlightList: Highlight[] = [
         year: "2025",
         events: [
             {
+                title: "Launched SquarePad for ikas",
+                description: "I built SquarePad, a Next.js-based app that helps İkas merchants generate perfectly square 1:1 product images for use in social media, ads, and feeds — directly inside their store dashboards.",
+                imageUrl: "/images/projects/squarepad-logo.png"
+            },
+            {
                 title: "Graduated (Master's degree)",
                 description: "I graduated with a master's degree with a 4/4 grade. My thesis topic is to develop a no-code platform and a LLM supported by AI.",
                 imageUrl: `${imageFolderPath}/2025_master_degree.jpg`
