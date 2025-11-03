@@ -38,7 +38,7 @@ type SocialLink = {
 
 const mainLinks = [
   { href: "/", icon: Home, label: "Home" },
-  { href: "/blog", icon: PenTool, label: "Writing" },
+  { href: "/blog", icon: PenTool, label: "Blog" },
   { href: "/projects", icon: Code2, label: "Projects" },
   { href: "/talks", icon: Presentation, label: "Talks" },
   { href: "/highlights", icon: Map, label: "Highlights" },
