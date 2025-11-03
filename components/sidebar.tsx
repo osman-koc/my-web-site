@@ -33,9 +33,9 @@ type SocialLink = {
 const mainLinks = [
   { href: "/", icon: Home, label: "Home" },
   { href: "/blog", icon: PenTool, label: "Writing" },
-  { href: "/highlights", icon: Map, label: "Highlights" },
   { href: "/projects", icon: Code2, label: "Projects" },
   { href: "/talks", icon: Presentation, label: "Talks" },
+  { href: "/highlights", icon: Map, label: "Highlights" },
   { href: "/tools", icon: Layers, label: "Tools" },
   { href: "/workspace", icon: Briefcase, label: "Workspace" },
   { href: "/bookmarks", icon: Bookmark, label: "Bookmarks" },
@@ -98,24 +98,41 @@ export function Sidebar() {
         "fixed left-0 top-0 h-screen w-64 border-r bg-background p-6 transition-transform duration-200 ease-in-out z-40",
         isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
       )}>
-        <div className="flex h-full flex-col justify-between">
+        <div className="flex h-full flex-col">
           <div className="space-y-8">
-            <Link href="/" className="block" onClick={() => setIsOpen(false)}>
-              <div className="space-y-3">
-                <Image
-                  src={sharedMetadata.urls.gravatarImg}
-                  alt="Osman Koç"
-                  width={48}
-                  height={48}
-                  className="rounded-full"
-                  priority
-                />
-                <div>
-                  <h2 className="font-semibold">{ sharedMetadata.titleShort }</h2>
-                  <p className="text-sm text-muted-foreground">{ sharedMetadata.subTitle }</p>
+            <div className="space-y-4">
+              <Link href="/" className="block" onClick={() => setIsOpen(false)}>
+                <div className="space-y-3">
+                  <Image
+                    src={sharedMetadata.urls.gravatarImg}
+                    alt="Osman Koç"
+                    width={48}
+                    height={48}
+                    className="rounded-full"
+                    priority
+                  />
+                  <div>
+                    <h2 className="font-semibold">{ sharedMetadata.titleShort }</h2>
+                    <p className="text-sm text-muted-foreground">{ sharedMetadata.subTitle }</p>
+                  </div>
                 </div>
+              </Link>
+
+              <div className="flex items-center space-x-4 pt-2">
+                {socialLinks.map(({ href, icon: Icon, label, className }) => (
+                  <a
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {<Icon className={className} />}
+                    <span className="sr-only">{label}</span>
+                  </a>
+                ))}
               </div>
-            </Link>
+            </div>
 
             <nav className="space-y-2">
               {mainLinks.map(({ href, icon: Icon, label }) => (
@@ -134,23 +151,6 @@ export function Sidebar() {
               ))}
             </nav>
           </div>
-
-          <div className="flex items-center space-x-4 fixed bottom-8 left-0 w-full p-4 justify-around z-10 md:static md:flex-none">
-            {socialLinks.map(({ href, icon: Icon, label, className }) => (
-              <a
-                key={href}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {<Icon className={className} />}
-                <span className="sr-only">{label}</span>
-              </a>
-            ))}
-          </div>
-
-
         </div>
       </aside>
 
