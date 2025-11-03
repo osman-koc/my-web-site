@@ -51,6 +51,14 @@ export default function RootLayout({
                   <ThemeToggle />
                 </div>
                 <main>{children}</main>
+                
+                <div className="mt-16">
+                  {/** Footer bileşeni */}
+                  <Suspense>
+                    {/** Lazy load için Suspense, istersen kaldırabilirsin */}
+                    {require('@/components/footer').default()}
+                  </Suspense>
+                </div>
               </div>
             </div>
           </div>
