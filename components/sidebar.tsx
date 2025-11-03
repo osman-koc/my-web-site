@@ -12,7 +12,6 @@ import {
   Briefcase,
   Bookmark,
   Github, 
-  Twitter, 
   Linkedin,
   Menu,
   X,
@@ -20,12 +19,19 @@ import {
   Presentation,
   type LucideIcon,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, type ComponentType, type SVGProps } from "react";
 import { sharedMetadata } from "@/lib/shared-metadata";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { XLogo } from "@/components/icons/x-logo";
 
 type SocialLink = {
   href: string;
-  icon: LucideIcon | (() => JSX.Element);
+  icon: LucideIcon | ComponentType<SVGProps<SVGSVGElement>> | (() => JSX.Element);
   label: string;
   className: string;
 };
@@ -50,8 +56,8 @@ const socialLinks: SocialLink[] = [
   },
   { 
     href: `https://x.com/${sharedMetadata.social.x}`, 
-    icon: Twitter, 
-    label: "Twitter (X)",
+    icon: XLogo, 
+    label: "X (Twitter)",
     className: "h-5 w-5"
   },
   { 
@@ -118,21 +124,32 @@ export function Sidebar() {
                 </div>
               </Link>
 
-              <div className="flex items-center space-x-4 pt-2">
-                {socialLinks.map(({ href, icon: Icon, label, className }) => (
-                  <a
-                    key={href}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {<Icon className={className} />}
-                    <span className="sr-only">{label}</span>
-                  </a>
-                ))}
-              </div>
+              <TooltipProvider delayDuration={200}>
+                <div className="flex items-center justify-between pt-2">
+                  {socialLinks.map(({ href, icon: Icon, label, className }) => (
+                    <Tooltip key={href}>
+                      <TooltipTrigger asChild>
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-foreground transition-colors"
+                          aria-label={label}
+                        >
+                          {<Icon className={className} />}
+                          <span className="sr-only">{label}</span>
+                        </a>
+                      </TooltipTrigger>
+                      <TooltipContent side="top" align="center">
+                        {label}
+                      </TooltipContent>
+                    </Tooltip>
+                  ))}
+                </div>
+              </TooltipProvider>
             </div>
+
+            <div className="border-t border-border" />
 
             <nav className="space-y-2">
               {mainLinks.map(({ href, icon: Icon, label }) => (
