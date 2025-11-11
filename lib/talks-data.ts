@@ -21,14 +21,13 @@ export const TalksList: Talk[] = [
         planned: true
       }, 
       {
-        title: 'Future of Development with AI',
+        title: 'How We Use AI in Enterprise Software Development',
         datetime: '2025-11-17',
-        location: 'Istanbul Ticaret University, Istanbul',
-          description:
-            'Keynote on the evolving role of AI in software development, future trends, and how AI is shaping the next generation of developer experiences.',
-        imageUrl: defaultImage, //`${imageFolderPath}/2025_istanbul_ticaret_university.jpeg`,
-        imageUrlDark: defaultImageDark, //`${imageFolderPath}/2025_istanbul_ticaret_university.png`,
-        participationLink: '#',
+        location: 'Hezarfen Campus, Istanbul Ticaret University, Istanbul',
+        description: 'A short talk sharing real-world insights on how we integrate AI into software development at the enterprise level — from practical tools to in-house solutions developed at Turkcell.',
+        imageUrl: `${imageFolderPath}/2025_istanbul_ticaret_university.jpeg`,
+        imageUrlDark: `${imageFolderPath}/2025_istanbul_ticaret_university.jpeg`,
+        participationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdJJvG_PPtuFUkOSK8hfh5LsLt2mBtTwH5SJ0cCh16w9QXvuw/viewform',
         planned: true
       },
       {
