@@ -1,7 +1,7 @@
 "use client";
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { ImageDialog } from '@/components/ui/image-dialog';
+import Image from 'next/image';
 
 interface TalkDetailsProps {
   talk: {
@@ -35,35 +35,38 @@ export function TalkDetailsDialog({ talk, isOpen, onClose }: TalkDetailsProps) {
   const darkImage = talk.imageUrlDark ?? talk.imageUrl;
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-3xl">
+      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl">{talk.title}</DialogTitle>
         </DialogHeader>
         
         <div className="space-y-6">
           {(lightImage || darkImage) && (
-            <div className="aspect-video overflow-hidden rounded-lg">
-              <div className="h-full w-full block dark:hidden">
-                {lightImage && (
-                  <ImageDialog
-                    imageUrl={lightImage}
-                    altText={talk.title}
-                    className="h-full w-full object-cover"
-                    enableDialog={false}
+            <div className="w-full rounded-lg overflow-hidden bg-muted/30 flex items-center justify-center">
+              {lightImage && (
+                <div className="relative w-full max-h-[50vh] block dark:hidden">
+                  <Image
+                    src={lightImage}
+                    alt={talk.title}
+                    width={1200}
+                    height={675}
+                    className="w-full h-auto object-contain max-h-[50vh] rounded-lg"
+                    style={{ maxHeight: '50vh' }}
                   />
-                )}
-              </div>
-
-              <div className="h-full w-full hidden dark:block">
-                {darkImage && (
-                  <ImageDialog
-                    imageUrl={darkImage}
-                    altText={talk.title}
-                    className="h-full w-full object-cover"
-                    enableDialog={false}
+                </div>
+              )}
+              {darkImage && (
+                <div className="relative w-full max-h-[50vh] hidden dark:block">
+                  <Image
+                    src={darkImage}
+                    alt={talk.title}
+                    width={1200}
+                    height={675}
+                    className="w-full h-auto object-contain max-h-[50vh] rounded-lg"
+                    style={{ maxHeight: '50vh' }}
                   />
-                )}
-              </div>
+                </div>
+              )}
             </div>
           )}
 
@@ -113,28 +116,31 @@ export function TalkDetailsDialog({ talk, isOpen, onClose }: TalkDetailsProps) {
           )}
 
           <div className="flex flex-wrap items-center gap-4">
-            {talk.participationLink && talk.participationLink !== '#' && (
-              <a
-                href={talk.participationLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-primary-foreground hover:bg-primary/90"
-              >
-                {talk.planned ? 'Join / Register' : 'View Details'}
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-4 w-4 ml-1"
+            {(() => {
+              const shouldShowRegister = talk.planned !== false && talk.datetime && new Date(talk.datetime) > new Date(new Date().toDateString());
+              return shouldShowRegister && talk.participationLink && talk.participationLink !== '#' && (
+                <a
+                  href={talk.participationLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-primary-foreground hover:bg-primary/90"
                 >
-                  <path d="M7 7h10v10" />
-                  <path d="M7 17 17 7" />
-                </svg>
-              </a>
-            )}
+                  Join / Register
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-4 w-4 ml-1"
+                  >
+                    <path d="M7 7h10v10" />
+                    <path d="M7 17 17 7" />
+                  </svg>
+                </a>
+              );
+            })()}
 
             {talk.otherLinks && talk.otherLinks.length > 0 && (
               talk.otherLinks.filter(l => l.url && l.url !== '#').map((link) => (

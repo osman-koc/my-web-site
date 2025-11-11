@@ -82,11 +82,14 @@ export function TalkCard({ talk, onViewDetails }: TalkCardProps) {
         </div>
 
         <div className="flex items-center justify-between mt-4 pt-4 border-t">
-          {talk.participationLink && talk.participationLink !== '#' && (
-            <div className="flex flex-wrap items-center gap-3">
-              <a href={talk.participationLink} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary">{talk.planned ? 'Register' : 'Details'}</a>
-            </div>
-          )}
+          {(() => {
+            const shouldShowRegister = talk.planned !== false && talk.datetime && new Date(talk.datetime) > new Date(new Date().toDateString());
+            return shouldShowRegister && talk.participationLink && talk.participationLink !== '#' && (
+              <div className="flex flex-wrap items-center gap-3">
+                <a href={talk.participationLink} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary">Register</a>
+              </div>
+            );
+          })()}
 
           <button onClick={() => onViewDetails(talk)} className="inline-flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary ml-auto">
             View Details
