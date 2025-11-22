@@ -25,10 +25,10 @@ export const TalksList: Talk[] = [
         datetime: '2025-11-17',
         location: 'Hezarfen Campus, Istanbul Ticaret University, Istanbul',
         description: 'A short talk sharing real-world insights on how we integrate AI into software development at the enterprise level — from practical tools to in-house solutions developed at Turkcell.',
-        imageUrl: `${imageFolderPath}/2025_istanbul_ticaret_university.jpeg`,
-        imageUrlDark: `${imageFolderPath}/2025_istanbul_ticaret_university.jpeg`,
-        participationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdJJvG_PPtuFUkOSK8hfh5LsLt2mBtTwH5SJ0cCh16w9QXvuw/viewform',
-        planned: true
+        imageUrl: `${imageFolderPath}/2025_ticaretedutr_turkcellitsolutionsday.jpeg`,
+        imageUrlDark: `${imageFolderPath}/2025_ticaretedutr_turkcellitsolutionsday.jpeg`,
+        participationLink: '#',
+        planned: false
       },
       {
         title: "Master's Thesis Defense",
