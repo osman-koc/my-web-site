@@ -5,6 +5,12 @@ const githubRepoBaseUrl = 'https://github.com/osman-koc';
 
 export const ProjectList: Project[] = [
   {
+    title: "Freedom Complete Builder",
+    description: "Custom skateboard complete builder for the freedom.com.tr ikas store. Lets users select all skateboard parts in one screen and place a single order, with assembly handled by the Freedom store.",
+    image: `${imageFolderPath}/freedom-complete-builder.png`,
+    demoUrl: "https://freedom.com.tr/pages/complete-builder"
+  },
+  {
     title: "SquarePad for ikas",
     description: "Square product-image generator for ikas stores. Create 1:1 visuals from catalog items, image links, or XML feeds — ready for social and ads.",
     image: `${imageFolderPath}/squarepad-logo.png`,
