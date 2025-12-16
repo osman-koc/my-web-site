@@ -7,11 +7,11 @@ const defaultImageDark = '/images/talks/no-image-dark.png';
 
 export const TalksList: Talk[] = [
   {
-    year: '2025',
+    year: '2026',
     talks: [
        {
         title: 'AI-Assisted Developer Tools Workshop',
-        datetime: '2025-12-16',
+        datetime: '2026-01-08',
         location: 'Uludag University, Bursa',
           description:
             'Hands-on workshop exploring the latest AI-powered tools for developers, including practical demonstrations and workflow optimization strategies.',
@@ -20,6 +20,11 @@ export const TalksList: Talk[] = [
         participationLink: '#',
         planned: true
       }, 
+    ]
+  },
+  {
+    year: '2025',
+    talks: [
       {
         title: 'How We Use AI in Enterprise Software Development',
         datetime: '2025-11-17',
