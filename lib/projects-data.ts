@@ -5,6 +5,12 @@ const githubRepoBaseUrl = 'https://github.com/osman-koc';
 
 export const ProjectList: Project[] = [
   {
+    title: "yâdet",
+    description: "A mobile-first cemetery care platform that enables remote grave maintenance. Users can publish care requests, while local service providers accept tasks and complete them on-site, making it possible to manage and monitor cemetery services from anywhere.",
+    image: `${imageFolderPath}/yadet-app.png`,
+    demoUrl: "https://yadet.app"
+  },
+  {
     title: "Freedom Complete Builder",
     description: "Custom skateboard complete builder for the freedom.com.tr ikas store. Lets users select all skateboard parts in one screen and place a single order, with assembly handled by the Freedom store.",
     image: `${imageFolderPath}/freedom-complete-builder.png`,
