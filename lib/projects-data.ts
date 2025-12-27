@@ -8,7 +8,13 @@ export const ProjectList: Project[] = [
     title: "yâdet",
     description: "A mobile-first cemetery care platform that enables remote grave maintenance. Users can publish care requests, while local service providers accept tasks and complete them on-site, making it possible to manage and monitor cemetery services from anywhere.",
     image: `${imageFolderPath}/yadet-app.png`,
-    demoUrl: "https://yadet.app"
+    demoUrl: "https://yadet.app",
+    storeLinks: [
+      {
+        type: "appstore",
+        url: "https://apps.apple.com/tr/app/yadet-uzaktan-mezar-bak%C4%B1m%C4%B1/id6756832778?l=tr"
+      }
+    ]
   },
   {
     title: "Freedom Complete Builder",
