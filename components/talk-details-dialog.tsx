@@ -1,6 +1,7 @@
 "use client";
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { isUpcomingTalk } from '@/lib/utils';
 import Image from 'next/image';
 
 interface TalkDetailsProps {
@@ -13,7 +14,6 @@ interface TalkDetailsProps {
     imageUrlDark?: string;
     participationLink?: string;
     otherLinks?: { label: string; url: string }[];
-    planned?: boolean;
   };
   isOpen: boolean;
   onClose: () => void;
@@ -117,7 +117,7 @@ export function TalkDetailsDialog({ talk, isOpen, onClose }: TalkDetailsProps) {
 
           <div className="flex flex-wrap items-center gap-4">
             {(() => {
-              const shouldShowRegister = talk.planned !== false && talk.datetime && new Date(talk.datetime) > new Date(new Date().toDateString());
+              const shouldShowRegister = isUpcomingTalk(talk.datetime);
               return shouldShowRegister && talk.participationLink && talk.participationLink !== '#' && (
                 <a
                   href={talk.participationLink}

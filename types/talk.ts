@@ -12,7 +12,6 @@ export type TalkItem = {
   imageUrlDark?: string;
   participationLink?: string; // link to register or join (optional)
   otherLinks?: { label: string; url: string }[]; // post-event materials, slides, photos
-  planned?: boolean; // indicates if this is a planned/upcoming talk
 };
 
 export type TalkWithYear = {
@@ -25,5 +24,4 @@ export type TalkWithYear = {
   imageUrlDark?: string;
   participationLink?: string;
   otherLinks?: { label: string; url: string }[];
-  planned?: boolean;
 };

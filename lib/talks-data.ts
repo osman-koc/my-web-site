@@ -17,8 +17,7 @@ export const TalksList: Talk[] = [
         'This paper presentation will be delivered at the 17th National Software Engineering Symposium (UYMS 2026), organized in collaboration with Muğla Sıtkı Koçman University and held as an in-person event between 14–16 May 2026. Presented on behalf of Turkcell, the talk focuses on enabling natural language querying over large-scale data platforms and discusses key engineering and architectural considerations. The presentation also includes the patented Text to Report project, demonstrating how natural language interfaces can be used to generate structured analytical reports from complex enterprise data sources.',
       imageUrl: "https://uyms26.mu.edu.tr/assets/banner-HjGUIG6r.png",
       imageUrlDark: "https://uyms26.mu.edu.tr/assets/banner-HjGUIG6r.png",
-      participationLink: 'https://uyms26.mu.edu.tr/',
-      planned: true
+      participationLink: 'https://uyms26.mu.edu.tr/'
     },
     {
         title: 'Engineering in the Age of Artificial Intelligence',
@@ -27,8 +26,7 @@ export const TalksList: Talk[] = [
         description: 'This conference presentation was delivered as part of the Open Talks: #Turkcell event series. It focuses on engineering in the age of artificial intelligence, exploring common concerns among university students such as whether AI will replace software engineers. The talk discusses how engineers and engineering candidates can position themselves in an AI-driven world, what kind of professional landscape they are likely to encounter, and how artificial intelligence can be approached as an enabling technology rather than a threat.',
         imageUrl: `${imageFolderPath}/2026_uludag_opentalks_turkcell.jpeg`,
         imageUrlDark: `${imageFolderPath}/2026_uludag_opentalks_turkcell.jpeg`,
-        participationLink: '#',
-        planned: false,
+        participationLink: '#'
       }
     ]
   },
@@ -43,7 +41,6 @@ export const TalksList: Talk[] = [
         imageUrl: `${imageFolderPath}/2025_ticaretedutr_turkcellitsolutionsday.jpeg`,
         imageUrlDark: `${imageFolderPath}/2025_ticaretedutr_turkcellitsolutionsday.jpeg`,
         participationLink: '#',
-        planned: false
       },
       {
         title: "Master's Thesis Defense",

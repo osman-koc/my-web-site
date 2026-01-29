@@ -1,6 +1,7 @@
 "use client";
 
 import { ImageDialog } from '@/components/ui/image-dialog';
+import { isUpcomingTalk } from '@/lib/utils';
 import type { TalkWithYear } from '@/types/talk';
 
 interface TalkCardProps {
@@ -25,7 +26,7 @@ export function TalkCard({ talk, onViewDetails }: TalkCardProps) {
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-lg border bg-card transition-colors hover:bg-accent">
       {/* Upcoming badge (more prominent) */}
-      {talk.planned && (
+      {isUpcomingTalk(talk.datetime) && (
         <span className="absolute top-3 right-3 z-10 inline-flex items-center rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground shadow">Upcoming</span>
       )}
 
@@ -83,8 +84,8 @@ export function TalkCard({ talk, onViewDetails }: TalkCardProps) {
 
         <div className="flex items-center justify-between mt-4 pt-4 border-t">
           {(() => {
-            const shouldShowRegister = talk.planned !== false && talk.datetime && new Date(talk.datetime) > new Date(new Date().toDateString());
-            return shouldShowRegister && talk.participationLink && talk.participationLink !== '#' && (
+            const shouldShowRegister = isUpcomingTalk(talk.datetime) && talk.participationLink && talk.participationLink !== '#';
+            return shouldShowRegister && (
               <div className="flex flex-wrap items-center gap-3">
                 <a href={talk.participationLink} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary">Register</a>
               </div>
