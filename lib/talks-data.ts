@@ -10,6 +10,17 @@ export const TalksList: Talk[] = [
   year: '2026',
   talks: [
     {
+      title: 'Natural Language Querying on Large-Scale Data Platforms',
+      datetime: '2026-05-14',
+      location: 'Muğla Sıtkı Koçman University, Muğla',
+      description:
+        'This paper presentation will be delivered at the 17th National Software Engineering Symposium (UYMS 2026), organized in collaboration with Muğla Sıtkı Koçman University and held as an in-person event between 14–16 May 2026. Presented on behalf of Turkcell, the talk focuses on enabling natural language querying over large-scale data platforms and discusses key engineering and architectural considerations. The presentation also includes the patented Text to Report project, demonstrating how natural language interfaces can be used to generate structured analytical reports from complex enterprise data sources.',
+      imageUrl: "https://uyms26.mu.edu.tr/assets/banner-HjGUIG6r.png",
+      imageUrlDark: "https://uyms26.mu.edu.tr/assets/banner-HjGUIG6r.png",
+      participationLink: 'https://uyms26.mu.edu.tr/',
+      planned: true
+    },
+    {
         title: 'Engineering in the Age of Artificial Intelligence',
         datetime: '2026-01-08',
         location: 'Uludag University, Bursa',
