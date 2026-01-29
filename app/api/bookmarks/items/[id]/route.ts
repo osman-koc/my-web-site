@@ -1,12 +1,13 @@
 import { getBookmarksByCollection } from '@/lib/raindrop';
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 
 export async function GET(
-  request: Request,
-  { params }: { params: { id: string } }
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const bookmarks = await getBookmarksByCollection(Number(params.id));
+    const { id } = await params;
+    const bookmarks = await getBookmarksByCollection(Number(id));
     return NextResponse.json(bookmarks);
   } catch (error) {
     console.error('API Error:', error);
