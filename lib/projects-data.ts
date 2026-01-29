@@ -12,7 +12,11 @@ export const ProjectList: Project[] = [
     storeLinks: [
       {
         type: "appstore",
-        url: "https://apps.apple.com/tr/app/yadet-uzaktan-mezar-bak%C4%B1m%C4%B1/id6756832778?l=tr"
+        url: "https://apps.apple.com/tr/app/yadet-uzaktan-mezar-bak%C4%B1m%C4%B1/id6756832778"
+      },
+      {
+        type: "playstore",
+        url: "https://play.google.com/store/apps/details?id=com.osmankoc.yadet"
       }
     ]
   },
