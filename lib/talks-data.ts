@@ -7,19 +7,18 @@ const defaultImageDark = '/images/talks/no-image-dark.png';
 
 export const TalksList: Talk[] = [
   {
-    year: '2026',
-    talks: [
-       {
-        title: 'AI-Assisted Developer Tools Workshop',
+  year: '2026',
+  talks: [
+    {
+        title: 'Engineering in the Age of Artificial Intelligence',
         datetime: '2026-01-08',
         location: 'Uludag University, Bursa',
-          description:
-            'Hands-on workshop exploring the latest AI-powered tools for developers, including practical demonstrations and workflow optimization strategies.',
-        imageUrl: defaultImage,
-        imageUrlDark: defaultImageDark,
+        description: 'This conference presentation was delivered as part of the Open Talks: #Turkcell event series. It focuses on engineering in the age of artificial intelligence, exploring common concerns among university students such as whether AI will replace software engineers. The talk discusses how engineers and engineering candidates can position themselves in an AI-driven world, what kind of professional landscape they are likely to encounter, and how artificial intelligence can be approached as an enabling technology rather than a threat.',
+        imageUrl: `${imageFolderPath}/2026_uludag_opentalks_turkcell.jpeg`,
+        imageUrlDark: `${imageFolderPath}/2026_uludag_opentalks_turkcell.jpeg`,
         participationLink: '#',
-        planned: true
-      }, 
+        planned: false,
+      }
     ]
   },
   {
