@@ -4,6 +4,16 @@ const imageFolderPath = '/images/highlights';
 
 export const HighlightList: Highlight[] = [
     {
+        year: "2026",
+        events: [
+            {
+                title: "Launched yâdet – Remote Grave Care Application",
+                description: "I built and launched yâdet, a mobile application that enables users to remotely request and manage grave care services. Published on both the App Store and Google Play, YADET connects families with trusted local service providers, offering a respectful and transparent solution for maintaining gravesites from anywhere.",
+                imageUrl: "/images/projects/yadet-launch-en.png"
+            },
+        ]
+    },
+    {
         year: "2025",
         events: [
             {
