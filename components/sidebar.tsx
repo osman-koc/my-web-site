@@ -40,7 +40,7 @@ const mainLinks = [
   { href: "/", icon: Home, label: "Home" },
   { href: "/blog", icon: PenTool, label: "Blog" },
   { href: "/projects", icon: Code2, label: "Projects" },
-  { href: "/talks", icon: Presentation, label: "Talks" },
+  { href: "/talks", icon: Presentation, label: "Talks & Events" },
   { href: "/highlights", icon: Map, label: "Highlights" },
   { href: "/tools", icon: Layers, label: "Tools" },
   { href: "/workspace", icon: Briefcase, label: "Workspace" },

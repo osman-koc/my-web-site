@@ -75,8 +75,8 @@ export const PageMetadataList: Record<string, PageMetadata> = {
     },
     talks: {
         route: "/talks",
-        title: "Talks & Presentations",
-        description: "Past and upcoming talks, presentations and conference appearances.",
+        title: "Talks & Events",
+        description: "Past and upcoming talks, events, presentations and conference appearances.",
         image: {
             url: '/api/og?page=talks',
             width: 1200,
