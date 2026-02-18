@@ -20,6 +20,16 @@ export const TalksList: Talk[] = [
       participationLink: 'https://uyms26.mu.edu.tr/'
     },
     {
+      title: 'Turkcell CodeNight İzmir – 7 Regions 7 CodeNight Series',
+      datetime: '2026-02-16T17:00:00',
+      location: 'Turkcell İzmir Plaza, Bornova, İzmir',
+      description:
+        'Organized by Turkcell Academy, the İzmir stop of the 7 Regions 7 CodeNight series brought together university students for an intensive overnight software development experience. Starting at 17:00 and continuing until 07:00, the event gathered 40 students from 30 different universities to work in teams on a real-life inspired case study. Throughout the night, participants experienced role distribution, rapid decision-making, and problem-solving under time pressure. In the final stage, teams presented their solutions on stage, demonstrating both their technical capabilities and communication skills. CodeNight İzmir focused not only on building technical solutions but also on strengthening teamwork, analytical thinking, and the ability to clearly articulate ideas in a high-energy, collaborative environment.',
+      imageUrl: `${imageFolderPath}/2026_turkcell_izmir_codenigh.png`,
+      imageUrlDark: `${imageFolderPath}/2026_turkcell_izmir_codenigh.png`,
+      participationLink: 'https://gelecegiyazanlar.turkcell.com.tr/'
+    },
+    {
         title: 'Engineering in the Age of Artificial Intelligence',
         datetime: '2026-01-08',
         location: 'Uludag University, Bursa',
