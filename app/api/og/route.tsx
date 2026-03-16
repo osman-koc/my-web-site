@@ -2,8 +2,6 @@ import { PageMetadataList } from '@/lib/page-metadata'
 import { ImageResponse } from 'next/og'
 import { NextRequest } from 'next/server'
 
-export const runtime = 'edge'
-
 const colors = {
     background: '#F4F4F5', // Light neutral gray
     foreground: '#18181B', // Almost black

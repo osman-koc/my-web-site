@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { PageMetadata } from '@/types/page-metadata';
 import { sharedMetadata } from './shared-metadata';
 
+const metadataBase = new URL(sharedMetadata.urls.website);
+
 export const PageMetadataList: Record<string, PageMetadata> = {
     home: {
         route: "/",
@@ -96,19 +98,35 @@ export const DefaultPageMetadata: PageMetadata = {
     },
 };
 
-export function GetMetada(route: string) {
-    const meta = PageMetadataList[route] || DefaultPageMetadata;
-    var keywords = sharedMetadata.keywords;
-    keywords.push(route);
+export function GetMetada(pageKey: string) {
+    const meta = PageMetadataList[pageKey] || DefaultPageMetadata;
+    const keywords = pageKey in PageMetadataList
+        ? [...sharedMetadata.keywords, pageKey]
+        : [...sharedMetadata.keywords];
 
     const subfix = meta.route != DefaultPageMetadata.route ? `— ${sharedMetadata.titleShort}` : '';
 
     const result: Metadata = {
+        metadataBase,
         title: `${meta.title} ${subfix}`,
         description: meta.description,
         keywords: keywords,
+        alternates: {
+            canonical: meta.route,
+        },
         openGraph: {
+            title: `${meta.title} ${subfix}`,
+            description: meta.description,
+            url: meta.route,
+            siteName: sharedMetadata.titleShort,
+            type: 'website',
             images: [meta.image],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: `${meta.title} ${subfix}`,
+            description: meta.description,
+            images: [meta.image.url],
         },
         icons: {
             icon: '/favicon.ico',
