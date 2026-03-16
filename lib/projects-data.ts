@@ -5,7 +5,23 @@ const githubRepoBaseUrl = 'https://github.com/osman-koc';
 
 export const ProjectList: Project[] = [
   {
-    title: "yâdet",
+    title: "ColdCase - Online Detective",
+    description: "An interactive detective game where players investigate unsolved cases, analyze clues, and connect evidence to uncover the truth. Designed as a mobile-first experience, ColdCase lets players step into the role of a digital detective and solve mysteries through immersive case files and investigation mechanics.",
+    image: `${imageFolderPath}/coldcase-app.png`,
+    demoUrl: "",
+    storeLinks: [
+      {
+        type: "appstore",
+        url: "https://apps.apple.com/tr/app/coldcase-online-dedektif/id6758562111"
+      },
+      {
+        type: "playstore",
+        url: "https://play.google.com/store/apps/details?id=com.osmankoc.coldcase"
+      }
+    ]
+  },
+  {
+    title: "yâdet - Remote Cemetery Care",
     description: "A mobile-first cemetery care platform that enables remote grave maintenance. Users can publish care requests, while local service providers accept tasks and complete them on-site, making it possible to manage and monitor cemetery services from anywhere.",
     image: `${imageFolderPath}/yadet-app.png`,
     demoUrl: "https://yadet.app",
