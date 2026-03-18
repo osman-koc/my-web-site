@@ -7,6 +7,16 @@ export const HighlightList: Highlight[] = [
         year: "2026",
         events: [
             {
+                title: "Launched `kocdev store` for my app portfolio",
+                description: "I launched apps.osmankoc.dev, a personal app portfolio hub with an AppStore-style interface that brings together all my published mobile and web applications in one place. Visitors can browse, discover, and reach each app directly from a clean, unified gallery.",
+                imageUrl: `${imageFolderPath}/2026_apps_osmankocdev_launch.png`
+            },
+            {
+                title: "Launched ColdCase – Online Detective Game",
+                description: "I built and launched ColdCase, an interactive mobile detective game where players investigate unsolved cases, analyze clues, and connect evidence to uncover the truth. Published on both the App Store and Google Play, ColdCase delivers an immersive case-file experience that puts players in the role of a digital detective.",
+                imageUrl: "/images/projects/coldcase-app.png"
+            },
+            {
                 title: "Launched yâdet – Remote Grave Care Application",
                 description: "I built and launched yâdet, a mobile application that enables users to remotely request and manage grave care services. Published on both the App Store and Google Play, YADET connects families with trusted local service providers, offering a respectful and transparent solution for maintaining gravesites from anywhere.",
                 imageUrl: "/images/projects/yadet-launch-en.png"
@@ -41,8 +51,8 @@ export const HighlightList: Highlight[] = [
         year: "2024",
         events: [
             {
-                title: "New UI for my new website: osmankoc.dev",
-                description: "Leaving my old website osmkoc.com, I published my new website developed with Tailwind CSS and shadcn/ui supported Next.js.",
+                title: "Migrated from osmkoc.com to osmankoc.dev",
+                description: "Retired my old personal website osmkoc.com and launched osmankoc.dev — a fully redesigned site built from the ground up with Next.js, Tailwind CSS, and shadcn/ui. The new domain reflects a cleaner identity, and the new stack brings a modern UI, better performance, and a more maintainable codebase.",
             },
             {
                 title: "Launched 'En Yakın Hastaneyi Bul' Telegram Bot",
@@ -78,12 +88,7 @@ export const HighlightList: Highlight[] = [
             {
                 title: "Promoted to Senior Developer",
                 description: "Member of a IoT scrum team as a scrum master and developer developing backend services.",
-            }
-        ]
-    },
-    {
-        year: "2022",
-        events: [
+            },
             {
                 title: "Master's degree training started",
                 description: "I started my master's degree in Electrical-Electronics and Computer Engineering."
