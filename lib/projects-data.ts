@@ -5,6 +5,13 @@ const githubRepoBaseUrl = 'https://github.com/osman-koc';
 
 export const ProjectList: Project[] = [
   {
+    title: 'kocdev Store',
+    description: 'A personal app portfolio hub with an App Store-style interface that brings together all my published mobile and web applications in one place. Visitors can browse, discover, and reach each app directly from a clean, unified gallery.',
+    image: '/images/highlights/2026_apps_osmankocdev_launch.png',
+    demoUrl: 'https://apps.osmankoc.dev',
+    sourceUrl: `${githubRepoBaseUrl}/my-apps`
+  },
+  {
     title: "ColdCase - Online Detective",
     description: "An interactive detective game where players investigate unsolved cases, analyze clues, and connect evidence to uncover the truth. Designed as a mobile-first experience, ColdCase lets players step into the role of a digital detective and solve mysteries through immersive case files and investigation mechanics.",
     image: `${imageFolderPath}/coldcase-app.png`,
