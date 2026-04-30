@@ -33,6 +33,9 @@ export default function AppPolicyPage_Turkish() {
                 <li>
                     "Rastgele Alıntı ve Sözler" uygulaması içinde kullanıcı cihaz bilgisi dahil olmak üzere, hiçbir kişisel veri tutulmamaktadır.
                 </li>
+                <li>
+                    "Dırdır" uygulaması, Firebase tarafından sağlanan anonim kimlik doğrulamayı kullanır; isim, e-posta adresi veya telefon numarası gibi herhangi bir kişisel bilgi toplanmaz. Görev verileri (başlık, not, tamamlanma durumu) ve isteğe bağlı kanıt fotoğrafları, yalnızca göreve dahil olan iki eşleştirilmiş kullanıcı tarafından erişilebilecek şekilde Firebase Firestore ve Storage'da saklanır. Yapılandırdığınız görev hatırlatmalarını iletmek amacıyla yalnızca bir cihaz bildirim tokeni saklanır. Reklam SDK'sı veya üçüncü taraf izleme aracı kullanılmamaktadır.
+                </li>
             </ul>
 
             <p>
@@ -71,7 +74,7 @@ export default function AppPolicyPage_Turkish() {
                 <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                     <CalendarIcon size={16} />
                     <b>Son Günceleme Tarihi:</b>
-                    <span>10/02/2024</span>
+                    <span>30/04/2026</span>
                 </div>
             </div>
         </div>

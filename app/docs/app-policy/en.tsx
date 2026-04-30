@@ -33,6 +33,9 @@ export default function AppPolicyPage_English() {
                 <li>
                     No personal data, including user device information, is stored in the "Random Quotes" application.
                 </li>
+                <li>
+                    The "Dırdır" application uses anonymous authentication provided by Firebase — no personal information such as name, email address, or phone number is collected. Task data (titles, notes, completion status) and optional proof photos are stored in Firebase Firestore and Storage and are only accessible to the two paired users involved in the task. A device push notification token is stored solely to deliver task reminders you have configured. No advertising SDKs or third-party tracking tools are used.
+                </li>
             </ul>
 
             <p>
@@ -74,7 +77,7 @@ export default function AppPolicyPage_English() {
                 <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                     <CalendarIcon size={16} />
                     <b>Last Update Date:</b>
-                    <span>10/02/2024</span>
+                    <span>30/04/2026</span>
                 </div>
             </div>
 
