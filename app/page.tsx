@@ -1,6 +1,6 @@
 import { MediumPosts } from '@/components/medium-posts';
 import { FeaturedProjects } from '@/components/featured-projects';
-import { getMediumPosts } from '@/lib/medium';
+import { getBlogPosts } from '@/lib/blog';
 import { TalksList } from '@/lib/talks-data';
 import { GetMetada } from '@/lib/page-metadata';
 import { RecentTalks } from '@/components/recent-talk';
@@ -22,7 +22,7 @@ function getLatestTalks(count: number = 1) {
 }
 
 export default async function Home() {
-  const { posts: mediumPosts } = await getMediumPosts(4);
+  const { posts: mediumPosts } = await getBlogPosts(4);
   const latestTalks = getLatestTalks(3);
 
   return (

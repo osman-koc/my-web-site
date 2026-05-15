@@ -1,11 +1,11 @@
 import { formatDistance } from "date-fns";
-import { type MediumPost } from "@/types/medium-post";
+import { type Post } from "@/types/post";
 
-export function MediumPosts({ 
+export function MediumPosts({
   posts,
-  showViewAll = false 
-}: { 
-  posts: MediumPost[];
+  showViewAll = false
+}: {
+  posts: Post[];
   showViewAll?: boolean;
 }) {
   if (!posts.length) return null;
@@ -28,9 +28,24 @@ export function MediumPosts({
             <p className="text-sm text-muted-foreground leading-relaxed">
               {post.contentSnippet}
             </p>
-            <time className="text-xs text-muted-foreground block">
-              {formatDistance(new Date(post.pubDate), new Date(), { addSuffix: true })}
-            </time>
+            <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+              <time>
+                {formatDistance(new Date(post.pubDate), new Date(), { addSuffix: true })}
+              </time>
+              {post.sourceUrl && (
+                <>
+                  <span className="text-muted-foreground/40">·</span>
+                  <img
+                    src={`https://www.google.com/s2/favicons?domain=${new URL(post.sourceUrl).hostname}&sz=14`}
+                    alt={post.sourceName ?? ''}
+                    width={14}
+                    height={14}
+                    className="rounded-sm"
+                  />
+                  <span>{post.sourceName}</span>
+                </>
+              )}
+            </div>
           </article>
         ))}
       </div>
