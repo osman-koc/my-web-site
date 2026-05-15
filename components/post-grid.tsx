@@ -42,10 +42,25 @@ export function PostGrid({ posts }: { posts: Post[] }) {
             <p className="text-muted-foreground line-clamp-2">
               {post.contentSnippet}
             </p>
-            
-            <time className="text-sm text-muted-foreground block">
-              {formatDistance(new Date(post.pubDate), new Date(), { addSuffix: true })}
-            </time>
+
+            <div className="flex items-center gap-2">
+              <time className="text-sm text-muted-foreground">
+                {formatDistance(new Date(post.pubDate), new Date(), { addSuffix: true })}
+              </time>
+              {post.sourceUrl && (
+                <>
+                  <span className="text-muted-foreground/40 text-xs">·</span>
+                  <img
+                    src={`https://www.google.com/s2/favicons?domain=${new URL(post.sourceUrl).hostname}&sz=16`}
+                    alt={post.sourceName ?? ''}
+                    width={16}
+                    height={16}
+                    className="rounded-sm"
+                  />
+                  <span className="text-xs text-muted-foreground">{post.sourceName}</span>
+                </>
+              )}
+            </div>
           </div>
         </a>
       ))}

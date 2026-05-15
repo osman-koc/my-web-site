@@ -4,4 +4,6 @@ export type Post = {
     pubDate: string;
     contentSnippet: string;
     thumbnail: string;
+    sourceName?: string;
+    sourceUrl?: string;
   };

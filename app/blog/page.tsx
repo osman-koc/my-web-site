@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { PostGrid } from '@/components/post-grid';
-import { getMediumPosts } from '@/lib/medium';
+import { getBlogPosts } from '@/lib/blog';
 import { PostGridSkeleton } from '@/components/post-grid-skeleton';
 import { ClientPagination } from '@/components/client-pagination';
 import { GetMetada } from '@/lib/page-metadata';
@@ -10,12 +10,13 @@ export const metadata = GetMetada('blog');
 export default async function BlogPage({
   searchParams,
 }: {
-  searchParams: { page?: string };
+  searchParams: Promise<{ page?: string }>;
 }) {
-  const currentPage = Number(searchParams.page) || 1;
+  const params = await searchParams;
+  const currentPage = Number(params.page) || 1;
   const postsPerPage = 10;
 
-  const { posts, total } = await getMediumPosts(postsPerPage, currentPage);
+  const { posts, total } = await getBlogPosts(postsPerPage, currentPage);
 
   return (
     <div className="space-y-8">

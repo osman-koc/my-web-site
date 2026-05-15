@@ -2,6 +2,7 @@ import Parser from 'rss-parser';
 import { MediumFeed } from '@/types/medium-feed';
 import sanitizeHtml from 'sanitize-html';
 import he from 'he';
+import { Post } from '@/types/post';
 
 type MediumRssItem = {
   title: string;
@@ -87,4 +88,50 @@ export async function getMediumPosts(limit = 10, page = 1): Promise<MediumFeed> 
 function extractImageFromContent(content: string): string {
   const imgMatch = content.match(/<img[^>]+src="([^">]+)"/);
   return imgMatch ? imgMatch[1] : '/images/no-image.jpg';
+}
+
+export async function getAllMediumPosts(): Promise<Post[]> {
+  try {
+    const response = await fetch(FEED_URL, {
+      headers: {
+        Accept: 'application/rss+xml, application/xml',
+      },
+      next: { revalidate: 300 },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch Medium feed: ${response.status}`);
+    }
+
+    const xml = await response.text();
+    const { items } = await parser.parseString(xml);
+
+    if (!items?.length) {
+      return [];
+    }
+
+    return items.map((item) => {
+      const decodedTitle = he.decode(item.title);
+      const content = item['content:encoded'] ?? item.content ?? '';
+      const plainText = sanitizeHtml(content, { allowedAttributes: {}, allowedTags: [] })
+        .replace(/\s+/g, ' ')
+        .trim();
+      const snippet = plainText.length > SNIPPET_LENGTH
+        ? `${plainText.slice(0, SNIPPET_LENGTH - 3).trimEnd()}...`
+        : plainText;
+
+      return {
+        title: decodedTitle,
+        link: item.link,
+        pubDate: item.isoDate ?? item.pubDate ?? '',
+        contentSnippet: snippet,
+        thumbnail: item.enclosure?.url || extractImageFromContent(content),
+        sourceName: 'Medium',
+        sourceUrl: 'https://medium.com',
+      };
+    });
+  } catch (error) {
+    console.error('Error fetching Medium posts:', error);
+    return [];
+  }
 }
