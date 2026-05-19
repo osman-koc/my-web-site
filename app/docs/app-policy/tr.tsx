@@ -16,7 +16,7 @@ export default function AppPolicyPage_Turkish() {
 
             <ul className="list-disc pl-4 pt-2">
                 <li>
-                    Uygulamalarımız, size ait herhangi bir kişisel bilgiyi toplamaz ve sizden bu yönde bir talepte bulunmaz.
+                    Uygulamalarımız, ilgili uygulama maddesinde açıkça belirtilenler dışında size ait herhangi bir kişisel bilgiyi toplamaz ve sizden bu yönde bir talepte bulunmaz.
                 </li>
                 <li>
                     "Getmar" adlı uygulamada istenen konum izni, konuma yakın marketleri haritada göstermek amaçlıdır. Bu konum bilgisi hiçbir şekilde bir yere kayıt edilmez ve herhangi bir yerle paylaşım söz konusu değildir. Konum için izin verme zorunluluğu bulunmuyor, kullanıcı isterse konuma izin vermeyebilir. Konuma izin verilmediği veya kapalı olduğu taktirde program genel bir harita görünümü sunar.
@@ -35,6 +35,9 @@ export default function AppPolicyPage_Turkish() {
                 </li>
                 <li>
                     "Dırdır" uygulaması, Firebase tarafından sağlanan anonim kimlik doğrulamayı kullanır; isim, e-posta adresi veya telefon numarası gibi herhangi bir kişisel bilgi toplanmaz. Görev verileri (başlık, not, tamamlanma durumu) ve isteğe bağlı kanıt fotoğrafları, yalnızca göreve dahil olan iki eşleştirilmiş kullanıcı tarafından erişilebilecek şekilde Firebase Firestore ve Storage'da saklanır. Yapılandırdığınız görev hatırlatmalarını iletmek amacıyla yalnızca bir cihaz bildirim tokeni saklanır. Reklam SDK'sı veya üçüncü taraf izleme aracı kullanılmamaktadır.
+                </li>
+                <li>
+                    "Pafit – Salon Yönetimi" uygulaması, telefon numarası ile Firebase OTP doğrulaması kullanır. Hesap ve salon üyeliği yönetimi için telefon numarası, rol (kursiyer/eğitmen), görünen ad, isteğe bağlı profil fotoğrafı, paket, randevu, katılım/check-in kayıtları ve bildirim tercihleri saklanır. QR check-in için kamera izni yalnızca QR kodlarını taramak amacıyla kullanılır; kamera görüntüsü kaydedilmez. Push bildirim tokeni sadece paket, randevu ve operasyonel hatırlatmalar göndermek için saklanır. Veriler bağlı olunan salon/tenant kapsamında izole edilir. Hesap silme talebi oluşturulduğunda kişisel bilgiler kaldırılır; eğitim geçmişi ve paket kayıtları muhasebe veya yasal kayıt amaçlarıyla salon tarafından saklanabilir. Reklam SDK'sı veya üçüncü taraf izleme aracı kullanılmamaktadır.
                 </li>
             </ul>
 
@@ -73,8 +76,8 @@ export default function AppPolicyPage_Turkish() {
             <div className='row md-12'>
                 <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                     <CalendarIcon size={16} />
-                    <b>Son Günceleme Tarihi:</b>
-                    <span>30/04/2026</span>
+                    <b>Son Güncelleme Tarihi:</b>
+                    <span>19/05/2026</span>
                 </div>
             </div>
         </div>

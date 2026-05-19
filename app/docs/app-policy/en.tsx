@@ -16,7 +16,7 @@ export default function AppPolicyPage_English() {
 
             <ul className="list-disc pl-4 pt-2">
                 <li>
-                    Our applications do not collect any personal information belonging to you and do not make any request from you in this direction.
+                    Except where explicitly stated in the relevant application item, our applications do not collect any personal information belonging to you and do not make any request from you in this direction.
                 </li>
                 <li>
                     The location permission requested in the application named "Getmar" is for the purpose of showing the markets close to the location on the map. This location information is not recorded anywhere and is not shared with any location. There is no obligation to give permission for the location, the user may not allow the location if they wish. If the location is not allowed or is switched off, the programme provides a general map view.
@@ -35,6 +35,9 @@ export default function AppPolicyPage_English() {
                 </li>
                 <li>
                     The "Dırdır" application uses anonymous authentication provided by Firebase — no personal information such as name, email address, or phone number is collected. Task data (titles, notes, completion status) and optional proof photos are stored in Firebase Firestore and Storage and are only accessible to the two paired users involved in the task. A device push notification token is stored solely to deliver task reminders you have configured. No advertising SDKs or third-party tracking tools are used.
+                </li>
+                <li>
+                    The "Pafit – Gym Management" application uses phone-number based Firebase OTP authentication. For account and gym membership management, it stores phone number, role (trainee/trainer), display name, optional profile photo, package, appointment, attendance/check-in records, and notification preferences. Camera permission is used only to scan QR codes for check-ins; camera images are not recorded. A push notification token is stored only to send package, appointment, and operational reminders. Data is isolated within the affiliated gym/tenant. When account deletion is requested, personal data is removed; training history and package records may be retained by the gym for accounting or legal record purposes. No advertising SDKs or third-party tracking tools are used.
                 </li>
             </ul>
 
@@ -77,7 +80,7 @@ export default function AppPolicyPage_English() {
                 <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                     <CalendarIcon size={16} />
                     <b>Last Update Date:</b>
-                    <span>30/04/2026</span>
+                    <span>19/05/2026</span>
                 </div>
             </div>
 
