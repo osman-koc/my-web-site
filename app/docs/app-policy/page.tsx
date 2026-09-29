@@ -1,10 +1,11 @@
 import AppPolicyPage_English from "./en";
 import AppPolicyPage_Turkish from "./tr";
 
-export default function AppPolicyPage({
+export default async function AppPolicyPage({
     searchParams,
 }: {
-    searchParams: { lang?: string };
+    searchParams: Promise<{ lang?: string }>;
 }) {
-    return searchParams.lang === 'tr' ? <AppPolicyPage_Turkish /> : <AppPolicyPage_English />;
+    const { lang } = await searchParams;
+    return lang === 'tr' ? <AppPolicyPage_Turkish /> : <AppPolicyPage_English />;
 }

@@ -39,6 +39,9 @@ export default function AppPolicyPage_English() {
                 <li>
                     The "Pafit – Gym Management" application uses phone-number based Firebase OTP authentication. For account and gym membership management, it stores phone number, role (trainee/trainer), display name, optional profile photo, package, appointment, attendance/check-in records, and notification preferences. Camera permission is used only to scan QR codes for check-ins; camera images are not recorded. A push notification token is stored only to send package, appointment, and operational reminders. Data is isolated within the affiliated gym/tenant. When account deletion is requested, personal data is removed; training history and package records may be retained by the gym for accounting or legal record purposes. No advertising SDKs or third-party tracking tools are used.
                 </li>
+                <li>
+                    The "Math Puzzle / İşlem Bulmaca" game uses Firebase authentication, App Check, Firestore, and Cloud Functions. It stores an account identifier, chosen username, avatar, country, language, submitted puzzle attempts, progress, scores, and request-safety records. If a player chooses email account recovery, Firebase also processes that email address and its sign-in links. The leaderboard shows usernames, built-in avatars, and scores; it does not display the selected country or internal account identifier. Gameplay progress and pending score submissions are also kept on the device for offline play and synchronized when service is available. Players can report or hide a leaderboard entry and delete their account in the app. Account deletion removes the account and its associated server and local profile and progress records. The current game has no advertising or cross-app tracking.
+                </li>
             </ul>
 
             <p>
@@ -80,7 +83,7 @@ export default function AppPolicyPage_English() {
                 <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                     <CalendarIcon size={16} />
                     <b>Last Update Date:</b>
-                    <span>19/05/2026</span>
+                    <span>26/09/2026</span>
                 </div>
             </div>
 

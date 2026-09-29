@@ -39,6 +39,9 @@ export default function AppPolicyPage_Turkish() {
                 <li>
                     "Pafit – Salon Yönetimi" uygulaması, telefon numarası ile Firebase OTP doğrulaması kullanır. Hesap ve salon üyeliği yönetimi için telefon numarası, rol (kursiyer/eğitmen), görünen ad, isteğe bağlı profil fotoğrafı, paket, randevu, katılım/check-in kayıtları ve bildirim tercihleri saklanır. QR check-in için kamera izni yalnızca QR kodlarını taramak amacıyla kullanılır; kamera görüntüsü kaydedilmez. Push bildirim tokeni sadece paket, randevu ve operasyonel hatırlatmalar göndermek için saklanır. Veriler bağlı olunan salon/tenant kapsamında izole edilir. Hesap silme talebi oluşturulduğunda kişisel bilgiler kaldırılır; eğitim geçmişi ve paket kayıtları muhasebe veya yasal kayıt amaçlarıyla salon tarafından saklanabilir. Reklam SDK'sı veya üçüncü taraf izleme aracı kullanılmamaktadır.
                 </li>
+                <li>
+                    "Math Puzzle / İşlem Bulmaca" oyunu Firebase kimlik doğrulama, App Check, Firestore ve Cloud Functions kullanır. Hesap kimliği, seçilen kullanıcı adı, avatar, ülke, dil, gönderilen bulmaca denemeleri, ilerleme, skorlar ve istek güvenliği kayıtları saklanır. Oyuncu e-posta ile hesap kurtarmayı seçerse Firebase bu e-posta adresini ve giriş bağlantılarını da işler. Sıralamada kullanıcı adları, hazır avatarlar ve skorlar görünür; seçilen ülke ve dahili hesap kimliği gösterilmez. Çevrim dışı oyun için ilerleme ve gönderilmeyi bekleyen skorlar cihazda da saklanır, hizmet kullanılabilir olduğunda eşitlenir. Oyuncular sıralama kaydını bildirebilir veya gizleyebilir ve hesaplarını uygulama içinden silebilir. Hesap silme, hesabı ve ilişkili sunucu kayıtları ile yerel profil ve ilerleme kayıtlarını kaldırır. Oyunun mevcut sürümünde reklam veya uygulamalar arası takip yoktur.
+                </li>
             </ul>
 
             <p>
@@ -77,7 +80,7 @@ export default function AppPolicyPage_Turkish() {
                 <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                     <CalendarIcon size={16} />
                     <b>Son Güncelleme Tarihi:</b>
-                    <span>19/05/2026</span>
+                    <span>26/09/2026</span>
                 </div>
             </div>
         </div>

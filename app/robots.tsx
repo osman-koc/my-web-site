@@ -5,8 +5,8 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
-      allow: '/',
-      disallow: ['/private/', '/docs/', '/docs/app-policy/'],
+      allow: ['/', '/docs/app-policy/'],
+      disallow: ['/private/', '/docs/'],
     },
     sitemap: `${sharedMetadata.urls.website}/sitemap.xml`,
   }
