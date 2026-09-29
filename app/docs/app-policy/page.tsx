@@ -1,5 +1,10 @@
 import AppPolicyPage_English from "./en";
 import AppPolicyPage_Turkish from "./tr";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    robots: { index: false, follow: false },
+};
 
 export default async function AppPolicyPage({
     searchParams,

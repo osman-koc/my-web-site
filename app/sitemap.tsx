@@ -5,6 +5,11 @@ import { sharedMetadata } from '@/lib/shared-metadata'
 
 const baseUrl = sharedMetadata.urls.website;
 
+const excludedRoutes: string[] = [
+    '/docs',
+    '/docs/app-policy',
+]
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const staticPages = getStaticPages()
     const dynamicPages = await getDynamicPages()
@@ -25,7 +30,7 @@ function getStaticPages(): MetadataRoute.Sitemap {
 }
 
 function isExcluded(route: string): boolean {
-    return route === '/docs' || (route.startsWith('/docs/') && route !== '/docs/app-policy')
+    return excludedRoutes.some(excludedRoute => route.startsWith(excludedRoute))
 }
 
 function walkDirectory(dir: string, basePath: string = ''): string[] {
