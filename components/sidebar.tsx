@@ -174,7 +174,7 @@ export function Sidebar() {
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-background/80 backdrop-blur-sm z-30 md:hidden"
+          className="fixed inset-0 bg-background/80 backdrop-blur-xs z-30 md:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}

@@ -27,7 +27,7 @@ export function TalkCard({ talk, onViewDetails }: TalkCardProps) {
     <div className="group relative flex flex-col overflow-hidden rounded-lg border bg-card transition-colors hover:bg-accent">
       {/* Upcoming badge (more prominent) */}
       {isUpcomingTalk(talk.datetime) && (
-        <span className="absolute top-3 right-3 z-10 inline-flex items-center rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground shadow">Upcoming</span>
+        <span className="absolute top-3 right-3 z-10 inline-flex items-center rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground shadow-sm">Upcoming</span>
       )}
 
       {(lightImage || darkImage) && (

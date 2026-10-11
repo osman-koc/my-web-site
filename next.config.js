@@ -12,10 +12,6 @@ const nextConfig = {
       }
     ],
   },
-  env: {
-    RAINDROP_ACCESS_TOKEN: process.env.RAINDROP_ACCESS_TOKEN,
-    PLAYAI_API_KEY: process.env.PLAYAI_API_KEY
-  },
 };
 
 module.exports = nextConfig;

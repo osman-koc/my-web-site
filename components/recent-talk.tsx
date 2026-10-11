@@ -29,7 +29,7 @@ export function RecentTalks({ talks }: { talks: TalkWithYear[] }) {
 
                 {isUpcomingTalk(talk.datetime) && (
                   <div className="mt-2">
-                    <span className="inline-flex items-center rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground shadow">Upcoming</span>
+                    <span className="inline-flex items-center rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground shadow-sm">Upcoming</span>
                   </div>
                 )}
 
