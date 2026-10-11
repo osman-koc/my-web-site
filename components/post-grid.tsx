@@ -27,6 +27,7 @@ export function PostGrid({ posts }: { posts: Post[] }) {
               src={post.thumbnail || '/images/no-image.jpg'}
               alt={post.title}
               fill
+              sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1407px) calc((100vw - 352px) / 2), 528px"
               className="object-cover transition-transform group-hover:scale-105"
             />
           </div>

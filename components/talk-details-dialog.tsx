@@ -44,24 +44,28 @@ export function TalkDetailsDialog({ talk, isOpen, onClose }: TalkDetailsProps) {
           {(lightImage || darkImage) && (
             <div className="w-full rounded-lg overflow-hidden bg-muted/30 flex items-center justify-center">
               {lightImage && (
-                <div className="relative w-full max-h-[50vh] block dark:hidden">
+                <div className={lightImage === darkImage ? 'relative w-full max-h-[50vh]' : 'relative w-full max-h-[50vh] dark:hidden'}>
                   <Image
                     src={lightImage}
                     alt={talk.title}
                     width={1200}
                     height={675}
+                    sizes="(max-width: 767px) calc(100vw - 80px), 720px"
+                    loading="eager"
                     className="w-full h-auto object-contain max-h-[50vh] rounded-lg"
                     style={{ maxHeight: '50vh' }}
                   />
                 </div>
               )}
-              {darkImage && (
+              {darkImage && darkImage !== lightImage && (
                 <div className="relative w-full max-h-[50vh] hidden dark:block">
                   <Image
                     src={darkImage}
                     alt={talk.title}
                     width={1200}
                     height={675}
+                    sizes="(max-width: 767px) calc(100vw - 80px), 720px"
+                    loading="eager"
                     className="w-full h-auto object-contain max-h-[50vh] rounded-lg"
                     style={{ maxHeight: '50vh' }}
                   />

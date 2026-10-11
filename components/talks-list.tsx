@@ -30,7 +30,7 @@ export function TalksList({ talks }: TalksListProps) {
     <div className="space-y-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {allTalks.map((talk, idx) => (
-          <TalkCard key={`talk-${idx}`} talk={talk} onViewDetails={(t) => setSelectedTalk(t)} />
+          <TalkCard key={`talk-${idx}`} talk={talk} eager={idx === 0} onViewDetails={(t) => setSelectedTalk(t)} />
         ))}
       </div>
 

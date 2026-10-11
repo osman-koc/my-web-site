@@ -1,15 +1,16 @@
 "use client";
 
-import { ImageDialog } from '@/components/ui/image-dialog';
+import Image from 'next/image';
 import { isUpcomingTalk } from '@/lib/utils';
 import type { TalkWithYear } from '@/types/talk';
 
 interface TalkCardProps {
   talk: TalkWithYear;
+  eager?: boolean;
   onViewDetails: (t: TalkWithYear) => void;
 }
 
-export function TalkCard({ talk, onViewDetails }: TalkCardProps) {
+export function TalkCard({ talk, onViewDetails, eager = false }: TalkCardProps) {
   const lightImage = talk.imageUrl ?? talk.imageUrlDark;
   const darkImage = talk.imageUrlDark ?? talk.imageUrl;
   function formatDate(dateString?: string) {
@@ -31,20 +32,27 @@ export function TalkCard({ talk, onViewDetails }: TalkCardProps) {
       )}
 
       {(lightImage || darkImage) && (
-        <div className="aspect-[16/9] overflow-hidden">
-          {/* Light-mode: prefer `imageUrl`, fall back to `imageUrlDark` */}
-          <div className="h-full w-full block dark:hidden">
-            {lightImage && (
-              <ImageDialog imageUrl={lightImage} altText={talk.title} className="h-full w-full object-cover" enableDialog={false} />
-            )}
-          </div>
-
-          {/* Dark-mode: prefer `imageUrlDark`, fall back to `imageUrl` */}
-          <div className="h-full w-full hidden dark:block">
-            {darkImage && (
-              <ImageDialog imageUrl={darkImage} altText={talk.title} className="h-full w-full object-cover" enableDialog={false} />
-            )}
-          </div>
+        <div className="relative aspect-[16/9] overflow-hidden">
+          {lightImage && (
+            <Image
+              src={lightImage}
+              alt={talk.title}
+              fill
+              className={darkImage !== lightImage ? 'object-cover dark:hidden' : 'object-cover'}
+              sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1407px) calc((100vw - 344px) / 2), 532px"
+              loading={eager ? 'eager' : 'lazy'}
+            />
+          )}
+          {darkImage && darkImage !== lightImage && (
+            <Image
+              src={darkImage}
+              alt={talk.title}
+              fill
+              className="hidden object-cover dark:block"
+              sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1407px) calc((100vw - 344px) / 2), 532px"
+              loading={eager ? 'eager' : 'lazy'}
+            />
+          )}
         </div>
       )}
 
