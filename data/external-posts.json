@@ -1,5 +1,14 @@
 [
   {
+    "title": "MCP 2026-07-28 ile Ne Değişti? Stateless Mimari ve Yeni Nesil Agent Altyapısı",
+    "link": "https://www.turkcell.com.tr/blog/mcp-2026-07-28-ile-ne-degisti-stateless-mimari-ve-yeni-nesil-agent-altyapisi-",
+    "pubDate": "2026-08-10T00:00:00+03:00",
+    "contentSnippet": "MCP 2026-07-28 ile gelen stateless mimariyi, uzun süren işlemler için Tasks yapısını ve yeni nesil agent altyapısının ölçeklenebilirlik, cache ve yetkilendirme yeniliklerini keşfedin.",
+    "thumbnail": "https://ffo3gv1cf3ir.merlincdn.net/SiteAssets/Blog/ArticlePage/_1786346964025_1200X400-mcp-2026-07-28-ile-ne-degisti-stateless-mimari-ve-yeni-nesil-agent-altyapisi.jpg",
+    "sourceName": "Turkcell Blog",
+    "sourceUrl": "https://www.turkcell.com.tr"
+  },
+  {
     "title": "MCP (Model Context Protocol) Nedir?",
     "link": "https://www.turkcell.com.tr/blog/mcp-nedir",
     "pubDate": "2026-05-07T00:00:00+03:00",
