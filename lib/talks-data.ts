@@ -10,6 +10,17 @@ export const TalksList: Talk[] = [
   year: '2026',
   talks: [
     {
+      title: 'Telekomünasyon Saha Denetimlerinde Kanıt Görsellerinin Hibrit Görüntü İşleme ve Çok Modlu Yapay Zeka ile Değerlendirilmesi',
+      datetime: '2026-11-05',
+      location: 'İstanbul Nişantaşı University, Maslak, Istanbul',
+      description:
+        'Our academic paper has been accepted following peer review for presentation at the 20th Istanbul Informatics Congress (20. İstanbul Bilişim Kongresi). I will present the paper on November 5, 2026. The paper focuses on evaluating evidence images in telecommunications field inspections using hybrid image processing and multimodal AI. The congress theme is “AI-Powered Future: Technology and Society.”',
+      imageUrl: `${imageFolderPath}/2026_istanbul_bilisim_kongresi.jpg`,
+      otherLinks: [
+        { label: 'Congress Website', url: 'https://www.istanbulbilisimkongresi.org.tr/2026/' },
+      ],
+    },
+    {
       title: 'Turkcell CodeNight İzmir – 7 Regions 7 CodeNight Series',
       datetime: '2026-02-16T17:00:00',
       location: 'Turkcell İzmir Plaza, Bornova, İzmir',
