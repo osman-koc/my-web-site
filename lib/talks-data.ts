@@ -10,7 +10,7 @@ export const TalksList: Talk[] = [
   year: '2026',
   talks: [
     {
-      title: 'Telekomünasyon Saha Denetimlerinde Kanıt Görsellerinin Hibrit Görüntü İşleme ve Çok Modlu Yapay Zeka ile Değerlendirilmesi',
+      title: 'Evaluation of Evidence Images in Telecommunications Field Inspections Using Hybrid Image Processing and Multimodal AI',
       datetime: '2026-11-05',
       location: 'İstanbul Nişantaşı University, Maslak, Istanbul',
       description:
